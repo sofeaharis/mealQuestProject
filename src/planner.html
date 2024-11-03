@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="planner.css" />
+
+    <title>Meal Planner - MEALQUEST</title>
+  </head>
+  <body>
+
+  <!-- logo -->
+  <div class="logo">
+    <img src="img/logo.jpg" alt="Logo" />
+    <span>MEALQUEST</span>
+  </div>
+
+  <!-- navigation bar -->
+  <nav class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="planner.html">PLANNER</a>
+    <a href="list.html">LIST</a>
+  </nav>
+
+  <!-- header (image and searchbar) -->
+  <header class="header">
+    <div class="header_container">
+      <h1>Your<br/>Meal Planner</h1>
+    </div>
+  </header>
+
+  <!-- Meal Categories -->
+  <section class="category">
+    <div class="category_title">
+        <h2>Select a Meal Category</h2>
+    </div>
+    <div class="category_card" id="category_card">
+        <!-- Category cards will be populated here -->
+    </div>
+  </section>
+
+  <!-- Meals Under Selected Category -->
+  <section id="meal_section" class="meal_section" style="display: none;">
+    <h2>Available Meals</h2>
+    <div id="meal_list" class="meal_list">
+        <!-- Meals will be displayed here -->
+    </div>
+  </section>
+
+  <!-- Meal Planner Section -->
+  <section class="meal_planner">
+    <h2>Your Meal Planner</h2>
+    <div class="planner_container">
+        <div class="meal_time" id="morning_meals">
+            <h3>Morning</h3>
+            <div class="meal_planner_list"></div>
+        </div>
+        <div class="meal_time" id="afternoon_meals">
+            <h3>Afternoon</h3>
+            <div class="meal_planner_list"></div>
+        </div>
+        <div class="meal_time" id="evening_meals">
+            <h3>Evening</h3>
+            <div class="meal_planner_list"></div>
+        </div>
+        <div class="meal_time" id="night_meals">
+            <h3>Night</h3>
+            <div class="meal_planner_list"></div>
+        </div>
+    </div>
+  </section>
+          
+  <footer>
+    <div class="footer_info">
+      <p>Meal Quest, Kuala Lumpur</p>
+      <p>CONTACT US: +60 11-908-2020 | enquiry @ mealQuest-hospitality.com.my</p>
+      <p>SOCIAL MEDIA: Meal Quest Cheras | @MQC</p>
+    </div>
+    <p>&copy; 2024 Meal Quest Site. All rights reserved.</p>
+  </footer>
+
+  <script src="planner.js"></script>
+  </body>
+</html>

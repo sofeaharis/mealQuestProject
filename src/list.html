@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="list.css" />
+
+    <title>Groceries List - MEALQUEST</title>
+  </head>
+  <body>
+
+  <!-- logo -->
+  <div class="logo">
+    <img src="img/logo.jpg" alt="Logo" />
+    <span>MEALQUEST</span>
+  </div>
+
+  <!-- navigation bar -->
+  <nav class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="planner.html">PLANNER</a>
+    <a href="list.html">LIST</a>
+  </nav>
+
+  <!-- header (image and searchbar) -->
+  <header class="header">
+    <div class="header_container">
+        <h1>Your<br/>Groceries List</h1>
+        <div class="search_bar">
+            <input type="text" id="ingredient_input" placeholder="Enter ingredient name" />
+            <button type="button" onclick="buttonClicked()">Add</button>
+            <i class="fas fa-plus"></i>
+        </div>
+    </div>
+  </header>
+
+    <!-- Big box for the grocery list -->
+  <section id="ingredient_container" class="ingredient_container">
+    <div class="ingredient_box">
+      <h3 class="list_title">Your List:</h3>
+      <div id="ingredient_list"></div>
+    </div>
+  </section>
+          
+  <footer>
+    <div class="footer_info">
+      <p>Meal Quest, Kuala Lumpur</p>
+      <p>CONTACT US: +60 11-908-2020 | enquiry @ mealQuest-hospitality.com.my</p>
+      <p>SOCIAL MEDIA: Meal Quest Cheras | @MQC</p>
+    </div>
+    <p>&copy; 2024 Meal Quest Site. All rights reserved.</p>
+  </footer>
+
+  <script src="list.js"></script>
+  </body>
+</html>

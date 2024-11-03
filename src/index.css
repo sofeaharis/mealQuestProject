@@ -1,0 +1,432 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* website upper part */
+.header {
+  background-image: linear-gradient(white, transparent),url("img/background1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 2; /* Ensures it stays on top */
+  font-size: 1.2rem;
+  font-weight: bold;        
+  color: #54443b;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 8px;        
+  box-shadow: 2px 2px 5px #54443b;
+}
+
+.navbar {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  display: flex;
+  gap: 20px;
+  font-size: 1.1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #54443b;
+  position: relative;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #54443b;
+  transition: width 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.header_container h1 {
+  font-size: 4rem;
+  font-weight: 550;
+  line-height: 4rem;
+  color: #605678;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.search_bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search_bar input {
+  padding: 10px;
+  width: 350px;
+  border: 1px solid #605678;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 2px 2px 10px #54443b;
+}
+
+.search_bar button {
+  padding: 10px 20px;
+  background-color: #605678;
+  color: white;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 2px 2px 10px #54443b;
+}
+
+.search_bar button:hover {
+  background-color: #FFE6A5;
+  box-shadow: 2px 2px 10px #54443b;
+}
+
+/* categories section */
+.category_title h2 {
+  font-weight: 700;
+  color: #54443b;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.category_card {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);;
+  gap: 1em;
+  max-width: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-content: center;
+}
+
+.category_card a {
+  text-decoration: none;
+}
+
+/* Individual Category Cards */
+.cat_card {
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 0.5em;
+  max-height: 200px;
+  transition: transform 0.3s; /* Add transition for smooth scaling */
+}
+
+.cat_card:hover {
+  transform: scale(1.05);
+}
+
+.cat_card img {
+  object-fit: cover;
+  max-width: 80px;
+  margin-bottom: 0.5em;
+}
+
+.cat_card h6 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #54443b;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* search result */
+.meal_result{
+  margin-top: 4rem;
+}
+
+.meal_result h2{
+  font-weight: 700;
+  color: #54443b;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#meal{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Meal Box Styles */
+.meal_item {
+  border-radius: 20px;
+  overflow: hidden; /* Ensures the border doesn't exceed the container */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  position: relative;
+  cursor: pointer;
+}
+
+.meal_img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.meal_name {
+  position: absolute; /* Position the text over the image */
+  bottom: 0; 
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #683B2B;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+
+.meal_item:hover {
+  transform: scale(1.05);
+}
+
+.meal_name h4{
+  text-align: center;
+  color: #54443b;
+  text-shadow: 2px 2px 8px rgba(108, 108, 108, 0.3);
+}
+
+/* meal details */
+.meal_details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: #8ABFA3;
+  border-radius: 1rem;
+  width: 60%; 
+  max-height: 70%;
+  overflow-y: auto; /* Allow scrolling if content exceeds max height */
+  display: none; 
+  padding: 1rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.meal_details::-webkit-scrollbar{
+  width: 10px;
+}
+
+.meal_details::-webkit-scrollbar-thumb{
+  background: #f0f0f0;
+  border-radius: 2rem;
+}
+
+/* js related */
+.showRecipe{
+  display: block;
+}
+
+.meal_details_content{
+  margin: 2rem;
+}
+
+.meal_details_content p:not(.recipe_category){
+  padding: 1rem 0;
+}
+
+.recipe_close_btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  background: transparent; /* Make the background transparent */
+  border: none; /* Remove border */
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.recipe_close_btn img {
+  width: 100%; 
+  height: auto;
+}
+
+.recipe_title{
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+}
+
+.recipe_category{
+  background: #fff;
+  font-weight: 600;
+  color: #8ABFA3;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.recipe_category{
+  background: #fff;
+  font-weight: 600;
+  color: #8ABFA3;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.recipe_instruct{
+  padding: 1rem 0;
+}
+
+.recipe_meal_img img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.recipe_link{
+  margin: 1.4rem 0;
+}
+
+.recipe_link a{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.4s linear;
+}
+
+.recipe_link a:hover{
+  opacity: 0.8;
+}
+
+/*  */
+.notFound{
+  grid-template-columns: 1fr!important;
+  color: #8ABFA3;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+}
+/* */
+
+/* Media Queries */
+/* The @media rule in CSS is used for creating responsive designs by 
+applying different styles based on the viewport size (the width of 
+the browser window). This allows to tailor the appearance of your 
+website for different devices, such as mobile phones, tablets, and desktops. */
+
+@media screen and (min-width: 600px){
+  .meal_search_box{
+      width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+/* when the viewport width is at least 600 pixels. It sets the width of
+ the search box to 540 pixels and centers it by applying auto margins. */
+
+@media screen and (min-width: 768px) {
+  #meal {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Change to 4 items in a row */
+      gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px){
+  #meal{
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* website lower part */
+.banner_content {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 3rem;
+  background-color: #FFE6A5;
+  margin: 80px 10%;
+}
+
+.banner_card {
+  text-align: center;
+}
+
+.banner_card h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #54443b;
+  text-shadow: 2px 2px 8px rgba(108, 108, 108, 0.3);
+}
+
+.banner_card p {
+  color: #B08401;
+  font-size: 1rem;
+  font-weight: 550;
+  text-shadow: 2px 2px 8px rgba(108, 108, 108, 0.3);
+}
+
+footer {
+  background-color: #FFBF61;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+footer .footer_info {
+  margin: 20px 0;
+  text-align: center;
+}
+
+footer .footer_info p {
+  margin: 5px 0;
+  text-shadow: 2px 2px 8px rgba(108, 108, 108, 0.3);
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+
+    <title>MEALQUEST</title>
+  </head>
+  <body>
+
+  <div class="logo">
+    <img src="img/logo.jpg" alt="Logo" />
+    <span>MEALQUEST</span>
+  </div>
+
+  <!-- navigation bar -->
+  <nav class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="planner.html">PLANNER</a>
+    <a href="list.html">LIST</a>
+  </nav>
+
+  <!-- header (image and searchbar) -->
+  <header class="header">
+    <div class="header_container">
+      <h1>Search<br/>Your Meal Here</h1>
+      <div class="search_bar">
+        <input type="text" id="meal_input" placeholder=" Enter ingredient name" />
+        <button onclick="buttonClicked()" id ="search_btn">Search</button>
+        <i class = "fas fa-search"></i>
+      </div>
+    </div>
+  </header>
+  
+  <!-- categories -->
+  <section class="category_container">
+    <div class="category_title">
+      <h2>Categories</h2>
+    </div>
+    <div class="category_card">
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Beef')">
+        <img src="img/beef.png" alt="Beef Category">
+        <h6>Beef</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Chicken')">
+        <img src="img/chicken.png" alt="Chicken Category">
+        <h6>Chicken</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Dessert')">
+        <img src="img/dessert.png" alt="Dessert Category">
+        <h6>Dessert</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Vegan')">
+        <img src="img/vegan.png" alt="Pasta Category">
+        <h6>Vegan</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Seafood')">
+        <img src="img/seafood.png" alt="Seafood Category">
+        <h6>Seafood</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Pasta')">
+        <img src="img/pasta.png" alt="Vegan Category">
+        <h6>Pasta</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Lamb')">
+        <img src="img/lamb.png" alt="Lamb Category">
+        <h6>Lamb</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Miscellaneous')">
+        <img src="img/miscellaneous.png" alt="Miscellaneous Category">
+        <h6>Miscellaneous</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Pork')">
+        <img src="img/pork.png" alt="Pork Category">
+        <h6>Pork</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Side')">
+        <img src="img/side.png" alt="Side Category">
+        <h6>Side</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Starter')">
+        <img src="img/starter.png" alt="Starter Category">
+        <h6>Starter</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Vegetarian')">
+        <img src="img/vegetarian.png" alt="Vegetarian Category">
+        <h6>Vegetarian</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Breakfast')">
+        <img src="img/breakfast.png" alt="Breakfast Category">
+        <h6>Breakfast</h6>
+      </a>
+      <a href="#" class="cat_card" onclick="getMealsByCategory('Goat')">
+        <img src="img/goat.png" alt="Goat Category">
+        <h6>Goat</h6>
+      </a>
+    </div>
+  </section>
+
+  <!-- search result -->
+  <div class="meal_result">
+    <h2 class="title" id="searchResultsTitle" style="display: none;">Your Search Results:</h2>
+    <div id="meal"></div>
+  </div>
+
+  <div class = "meal_details">
+    <!-- recipe close btn -->
+    <button type="button" class="btn recipe_close_btn" id="recipe_close_btn">
+      <img src="img/close.jpeg" alt="Close" />
+    </button>
+
+    <!-- meal content -->
+    <div class = "meal_details_content">
+    </div>
+  </div>
+
+  <section class="banner_content">
+    <div class="banner_card">
+      <h4>300+</h4>
+      <p>Good Reviews</p>
+    </div>
+    <div class="banner_card">
+      <h4>550+</h4>
+      <p>Happy Users</p>
+    </div>
+    <div class="banner_card">
+      <h4>600+</h4>
+      <p>Meals Search</p>
+    </div>
+  </section>
+          
+  <footer>
+    <div class="footer_info">
+      <p>Meal Quest, Kuala Lumpur</p>
+      <p>CONTACT US: +60 11-908-2020 | enquiry @ mealQuest-hospitality.com.my</p>
+      <p>SOCIAL MEDIA: Meal Quest Cheras | @MQC</p>
+    </div>
+    <p>&copy; 2024 Meal Quest Site. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+  </body>
+</html>
